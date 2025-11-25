@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sparktech_agency_task/core/utils/themes/theme.dart';
+import 'package:sparktech_agency_task/features/auth/presentation/blocs/register/register_bloc.dart';
+import 'package:sparktech_agency_task/features/auth/presentation/pages/splash_page.dart';
 import 'package:sparktech_agency_task/main.dart';
-import 'package:sparktech_agency_task/test_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,13 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [],
+      providers: [
+        BlocProvider(create: (_) => RegisterBloc()),
+      ],
       child: MaterialApp(
         navigatorKey: navigatorKey,
         title: 'Sparktech Agency Task',
         debugShowCheckedModeBanner: false,
         theme: theme,
-        home: const TestPage(),
+        home: const SplashPage(),
       ),
     );
   }
