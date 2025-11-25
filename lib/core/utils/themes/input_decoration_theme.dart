@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sparktech_agency_task/core/constants/colors.dart';
+
+InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
+  errorMaxLines: 3,
+  prefixIconColor: AppColors.secondaryFontColor,
+  suffixIconColor: AppColors.secondaryFontColor,
+  fillColor: AppColors.cardColor,
+  filled: true,
+  contentPadding: const EdgeInsets.all(16),
+  labelStyle: const TextStyle().copyWith(fontSize: 16, color: AppColors.secondaryFontColor),
+  hintStyle: GoogleFonts.poppins(textStyle: const TextStyle().copyWith(fontSize: 16, color: AppColors.secondaryFontColor, fontWeight: FontWeight.w500)),
+  errorStyle: GoogleFonts.poppins(textStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal)),
+  floatingLabelStyle: const TextStyle().copyWith(
+    color: Colors.black.withValues(alpha: 0.8),
+  ),
+  border: const OutlineInputBorder().copyWith(
+    borderRadius: BorderRadius.circular(12),
+    borderSide: const BorderSide(width: 1.4, color: AppColors.inputBorderColor),
+  ),
+  enabledBorder: const OutlineInputBorder().copyWith(
+    borderRadius: BorderRadius.circular(12),
+    borderSide: const BorderSide(width: 1.4, color: AppColors.inputBorderColor),
+  ),
+  focusedBorder: const OutlineInputBorder().copyWith(
+    borderRadius: BorderRadius.circular(12),
+    borderSide: const BorderSide(width: 1.7, color: AppColors.inputBorderFocusedColor),
+  ),
+  errorBorder: const OutlineInputBorder().copyWith(
+    borderRadius: BorderRadius.circular(12),
+    borderSide: const BorderSide(width: 1.4, color: AppColors.error),
+  ),
+  focusedErrorBorder: const OutlineInputBorder().copyWith(
+    borderRadius: BorderRadius.circular(12),
+    borderSide: const BorderSide(width: 1.7, color: AppColors.warning),
+  ),
+);
