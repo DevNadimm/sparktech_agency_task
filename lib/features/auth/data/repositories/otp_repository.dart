@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:sparktech_agency_task/core/constants/api_endpoints.dart';
-// import 'package:sparktech_agency_task/core/services/app_preferences.dart';
+import 'package:sparktech_agency_task/core/services/app_preferences.dart';
 
 class OtpRepository {
   static Future<Map<String, dynamic>> verifyOtp({
@@ -10,13 +10,13 @@ class OtpRepository {
     final Dio dio = Dio();
     final ApiEndpoints api = ApiEndpoints();
 
-    //final otpToken = await AppPreferences.getOtpToken();
+    final otpToken = await AppPreferences.getOtpToken();
 
     dio.options = BaseOptions(
       connectTimeout: const Duration(seconds: 15),
       receiveTimeout: const Duration(seconds: 15),
       headers: {
-        //"token": otpToken,
+        "token": otpToken,
         "Content-Type": "application/json",
       },
     );
