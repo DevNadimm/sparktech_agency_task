@@ -83,7 +83,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        'SparkTech Task',
+                        'Sparktech Task',
                         style: GoogleFonts.poppins(
                           textStyle: const TextStyle(
                             fontSize: 24,

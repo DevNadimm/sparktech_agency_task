@@ -22,7 +22,7 @@ class WelcomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Welcome to SparkTech Task',
+                  'Welcome to Sparktech Task',
                   style: GoogleFonts.poppins(
                     textStyle: const TextStyle(
                       fontSize: 22,

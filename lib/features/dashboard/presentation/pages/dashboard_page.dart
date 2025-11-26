@@ -20,7 +20,7 @@ class DashboardPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Thank You, SparkTech Agency!',
+                  'Thank You, Sparktech Agency!',
                   style: GoogleFonts.poppins(
                     textStyle: const TextStyle(
                       fontSize: 24,

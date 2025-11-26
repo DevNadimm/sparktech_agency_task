@@ -7,6 +7,7 @@ import 'package:sparktech_agency_task/core/widgets/app_bar_back_btn.dart';
 import 'package:sparktech_agency_task/core/widgets/app_notifier.dart';
 import 'package:sparktech_agency_task/core/widgets/loader.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/blocs/otp/otp_bloc.dart';
+import 'package:sparktech_agency_task/features/auth/presentation/pages/login_page.dart';
 
 class OtpVerificationPage extends StatefulWidget {
   static Route route(String email) => MaterialPageRoute(
@@ -37,11 +38,10 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
             'Account verified successfully! Please login.',
             type: MessageType.success,
           );
-          // Navigator.pushAndRemoveUntil(
-          //   context,
-          //   LoginPage.route(),
-          //       (route) => false,
-          // );
+          Navigator.push(
+            context,
+            LoginPage.route(),
+          );
         }
       },
       builder: (context, state) {
