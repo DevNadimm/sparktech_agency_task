@@ -136,17 +136,12 @@ The app integrates with a RESTful API for:
 
 ## Screenshots
 
-### Welcome Page
-![Welcome Page](assets/screenshots/welcome_page.png)
-
-### Register Page
-![Register Page](assets/screenshots/register_page.png)
-
-### Login Page
-![Login Page](assets/screenshots/login_page.png)
-
-### Dashboard Page
-![Dashboard Page](assets/screenshots/dashboard_page.png)
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="assets/screenshots/welcome_page.png" alt="Welcome Page" width="200"/>
+  <img src="assets/screenshots/register_page.png" alt="Register Page" width="200"/>
+  <img src="assets/screenshots/login_page.png" alt="Login Page" width="200"/>
+  <img src="assets/screenshots/dashboard_page.png" alt="Dashboard Page" width="200"/>
+</div>
 
 ## Dependencies
 
