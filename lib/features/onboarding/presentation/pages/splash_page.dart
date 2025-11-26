@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sparktech_agency_task/core/constants/asset_paths.dart';
 import 'package:sparktech_agency_task/core/constants/colors.dart';
 import 'package:sparktech_agency_task/core/services/app_preferences.dart';
+import 'package:sparktech_agency_task/features/dashboard/presentation/pages/dashboard_page.dart';
 import 'package:sparktech_agency_task/features/onboarding/presentation/pages/welcome_page.dart';
 
 class SplashPage extends StatefulWidget {
@@ -46,7 +47,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
     if (!mounted) return;
 
     if (token.isNotEmpty) {
-      // Navigator.pushReplacement(context, NavigationPage.route());
+      Navigator.pushReplacement(context, DashboardPage.route());
     } else {
       Navigator.pushReplacement(context, WelcomePage.route());
     }

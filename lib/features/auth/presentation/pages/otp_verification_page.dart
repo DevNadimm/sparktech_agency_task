@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -110,31 +109,6 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                   child: const Text("Verify OTP"),
                 ),
               ),
-              const SizedBox(height: 24),
-              Text.rich(
-                TextSpan(
-                  text: "Didn't receive the OTP? ",
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.secondaryFontColor,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: "Resend OTP",
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: AppColors.primaryColor,
-                      ),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          _resendOtp();
-                        },
-                    ),
-                  ],
-                ),
-              ),
             ],
           ),
         ),
@@ -151,12 +125,6 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
     } else {
       context.read<OtpBloc>().add(VerifyOtpEvent(otp: otp));
     }
-  }
-
-  void _resendOtp() {
-    final otp = _otpController.text.trim();
-    context.read<OtpBloc>().add(VerifyOtpEvent(otp: otp));
-
   }
 
   Widget _otpField(BuildContext context) {

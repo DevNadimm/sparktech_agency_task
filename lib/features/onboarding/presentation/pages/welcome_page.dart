@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sparktech_agency_task/core/constants/asset_paths.dart';
 import 'package:sparktech_agency_task/core/constants/colors.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/pages/register_page.dart';
+import 'package:sparktech_agency_task/features/dashboard/presentation/pages/dashboard_page.dart';
 
 class WelcomePage extends StatelessWidget {
   static Route route() => MaterialPageRoute(builder: (_) => const WelcomePage());
@@ -75,7 +76,7 @@ class WelcomePage extends StatelessWidget {
                   height: 50,
                   child: OutlinedButton(
                     onPressed: () {
-                      // Navigator.push(context, LoginPage.route());
+                      Navigator.pushAndRemoveUntil(context, DashboardPage.route(), (route) => false);
                     },
                     child: const Text('Login'),
                   ),

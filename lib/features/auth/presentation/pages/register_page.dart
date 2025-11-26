@@ -36,10 +36,6 @@ class _RegisterPageState extends State<RegisterPage> {
           AppNotifier.showToast(state.message, type: MessageType.error);
         }
         if (state is RegisterSuccess) {
-          AppNotifier.showToast(
-            'Registration successful! Please login.',
-            type: MessageType.success,
-          );
           Navigator.push(
             context,
             OtpVerificationPage.route(_emailController.text.trim()),
@@ -112,6 +108,21 @@ class _RegisterPageState extends State<RegisterPage> {
                   textInputAction: TextInputAction.next,
                   hintText: 'Enter email',
                   validationLabel: 'Email',
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Email is required';
+                    }
+
+                    final emailRegex = RegExp(
+                      r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+                    );
+
+                    if (!emailRegex.hasMatch(value.trim())) {
+                      return 'Please enter a valid email';
+                    }
+
+                    return null;
+                  },
                 ),
                 const SizedBox(height: 16),
                 CustomTextField(

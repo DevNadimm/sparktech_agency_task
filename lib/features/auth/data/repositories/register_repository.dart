@@ -16,7 +16,6 @@ class RegisterRepository {
     dio.options = BaseOptions(
       connectTimeout: const Duration(seconds: 15),
       receiveTimeout: const Duration(seconds: 15),
-      validateStatus: (status) => true,
     );
 
     try {
@@ -49,6 +48,8 @@ class RegisterRepository {
       );
 
       if (response.statusCode == 200 || response.statusCode == 201) {
+        debugPrint("Registration Response: ${response.data}");
+
         final otpToken = response.data?['data']?['otpToken']?['token'] ?? '';
         debugPrint("OTP Token: $otpToken");
 

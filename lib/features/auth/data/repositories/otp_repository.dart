@@ -15,7 +15,6 @@ class OtpRepository {
     dio.options = BaseOptions(
       connectTimeout: const Duration(seconds: 15),
       receiveTimeout: const Duration(seconds: 15),
-      validateStatus: (status) => true,
       headers: {
         "token": otpToken,
         "Content-Type": "application/json",
