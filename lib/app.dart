@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sparktech_agency_task/core/utils/themes/theme.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/blocs/otp/otp_bloc.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/blocs/register/register_bloc.dart';
-import 'package:sparktech_agency_task/features/auth/presentation/pages/splash_page.dart';
+import 'package:sparktech_agency_task/features/onboarding/presentation/pages/splash_page.dart';
 import 'package:sparktech_agency_task/main.dart';
 
 class MyApp extends StatelessWidget {

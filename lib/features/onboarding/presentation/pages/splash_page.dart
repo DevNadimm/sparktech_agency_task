@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sparktech_agency_task/core/constants/asset_paths.dart';
 import 'package:sparktech_agency_task/core/constants/colors.dart';
 import 'package:sparktech_agency_task/core/services/app_preferences.dart';
-import 'package:sparktech_agency_task/features/auth/presentation/pages/welcome_page.dart';
+import 'package:sparktech_agency_task/features/onboarding/presentation/pages/welcome_page.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
