@@ -12,9 +12,11 @@ import 'package:sparktech_agency_task/features/auth/presentation/widgets/auth_fo
 import 'package:sparktech_agency_task/features/dashboard/presentation/pages/dashboard_page.dart';
 
 class LoginPage extends StatefulWidget {
-  static Route route() => MaterialPageRoute(builder: (_) => const LoginPage());
+  static Route route([String? email]) => MaterialPageRoute(builder: (_) => LoginPage(email: email));
 
-  const LoginPage({super.key});
+  final String? email;
+
+  const LoginPage({super.key, this.email});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -24,6 +26,12 @@ class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _globalKey = GlobalKey();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void initState() {
+    _emailController.text = widget.email ?? '';
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

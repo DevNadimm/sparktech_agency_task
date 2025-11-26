@@ -40,7 +40,7 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
           );
           Navigator.push(
             context,
-            LoginPage.route(),
+            LoginPage.route(widget.email),
           );
         }
       },
