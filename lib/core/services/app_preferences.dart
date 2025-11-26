@@ -36,6 +36,22 @@ class AppPreferences {
     await prefs.remove(PreferenceKeys.refreshToken);
   }
 
+  /// OTP Token
+  static Future<String> getOtpToken() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString(PreferenceKeys.otpToken) ?? '';
+  }
+
+  static Future<void> setOtpToken(String token) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(PreferenceKeys.otpToken, token);
+  }
+
+  static Future<void> removeOtpToken() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(PreferenceKeys.otpToken);
+  }
+
   /// Clear all preferences
   static Future<void> clearAll() async {
     final prefs = await SharedPreferences.getInstance();

@@ -3,4 +3,5 @@ class PreferenceKeys {
 
   static const accessToken = 'access-token';
   static const refreshToken = 'refresh-token';
+  static const otpToken = 'otp-token';
 }

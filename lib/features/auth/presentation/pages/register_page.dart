@@ -8,6 +8,7 @@ import 'package:sparktech_agency_task/core/widgets/app_notifier.dart';
 import 'package:sparktech_agency_task/core/widgets/custom_text_field.dart';
 import 'package:sparktech_agency_task/core/widgets/loader.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/blocs/register/register_bloc.dart';
+import 'package:sparktech_agency_task/features/auth/presentation/pages/otp_verification_page.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/widgets/auth_footer.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/widgets/upload_profile_image_section.dart';
 
@@ -39,11 +40,10 @@ class _RegisterPageState extends State<RegisterPage> {
             'Registration successful! Please login.',
             type: MessageType.success,
           );
-          // Navigator.pushAndRemoveUntil(
-          //   context,
-          //   LoginPage.route(),
-          //       (route) => false,
-          // );
+          Navigator.push(
+            context,
+            OtpVerificationPage.route(_emailController.text.trim()),
+          );
         }
       },
       builder: (context, state) {

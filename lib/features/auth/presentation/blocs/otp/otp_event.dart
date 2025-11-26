@@ -1,4 +1,9 @@
 part of 'otp_bloc.dart';
 
-@immutable
-sealed class OtpEvent {}
+abstract class OtpEvent {}
+
+class VerifyOtpEvent extends OtpEvent {
+  final String otp;
+
+  VerifyOtpEvent({required this.otp});
+}
