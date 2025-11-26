@@ -56,12 +56,12 @@ class RegisterRepository {
 
         return response.data;
       } else {
-        throw Exception(response.data?['message'] ?? 'Something went wrong.');
+        throw Exception(response.data?['message'] ?? 'Registration failed. Please try again.');
       }
     } catch (e) {
       if (e is DioException) {
         debugPrint("Registration Dio Error: ${e.response?.data}");
-        throw Exception(e.response?.data?['message'] ?? 'Server error occurred.');
+        throw Exception(e.response?.data?['message'] ?? 'Server error. Please try again letter.');
       }
       debugPrint("Registration Error: $e");
       throw Exception('Failed to register user.');
