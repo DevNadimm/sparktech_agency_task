@@ -47,9 +47,9 @@ class RegisterRepository {
         ),
       );
 
-      if (response.statusCode == 200 || response.statusCode == 201) {
-        debugPrint("Registration Response: ${response.data}");
+      debugPrint("Registration Response: ${response.data}");
 
+      if (response.statusCode == 200 || response.statusCode == 201) {
         final otpToken = response.data?['data']?['otpToken']?['token'] ?? '';
         debugPrint("OTP Token: $otpToken");
 

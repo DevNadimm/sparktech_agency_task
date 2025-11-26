@@ -8,6 +8,7 @@ import 'package:sparktech_agency_task/core/widgets/app_notifier.dart';
 import 'package:sparktech_agency_task/core/widgets/custom_text_field.dart';
 import 'package:sparktech_agency_task/core/widgets/loader.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/blocs/register/register_bloc.dart';
+import 'package:sparktech_agency_task/features/auth/presentation/pages/login_page.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/pages/otp_verification_page.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/widgets/auth_footer.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/widgets/upload_profile_image_section.dart';
@@ -149,7 +150,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   label: "Already have an account? ",
                   actionText: "Sign In",
                   onTap: () {
-                    // Navigator.pushReplacement(context, LoginPage.route());
+                    Navigator.pushReplacement(context, LoginPage.route());
                   },
                 ),
               ],

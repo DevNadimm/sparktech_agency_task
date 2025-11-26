@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sparktech_agency_task/core/constants/asset_paths.dart';
 import 'package:sparktech_agency_task/core/constants/colors.dart';
+import 'package:sparktech_agency_task/features/auth/presentation/pages/login_page.dart';
 import 'package:sparktech_agency_task/features/auth/presentation/pages/register_page.dart';
-import 'package:sparktech_agency_task/features/dashboard/presentation/pages/dashboard_page.dart';
 
 class WelcomePage extends StatelessWidget {
   static Route route() => MaterialPageRoute(builder: (_) => const WelcomePage());
@@ -32,7 +32,7 @@ class WelcomePage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 8),
                 Container(
                   width: 80,
                   height: 3,
@@ -41,9 +41,9 @@ class WelcomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 12),
                 Text(
-                  'Manage your tasks efficiently.\nStay on top of your workflow\nand get things done smoothly.',
+                  'Thank you for taking the time to consider me.\nExcited to showcase my skills and contribute effectively.',
                   style: GoogleFonts.poppins(
                     textStyle: const TextStyle(
                       fontSize: 14,
@@ -54,10 +54,10 @@ class WelcomePage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 32),
                 SvgPicture.asset(
                   AssetPaths.welcome,
-                  height: 200,
+                  height: 240,
                 ),
                 const SizedBox(height: 40),
                 SizedBox(
@@ -76,7 +76,7 @@ class WelcomePage extends StatelessWidget {
                   height: 50,
                   child: OutlinedButton(
                     onPressed: () {
-                      Navigator.pushAndRemoveUntil(context, DashboardPage.route(), (route) => false);
+                      Navigator.push(context, LoginPage.route());
                     },
                     child: const Text('Login'),
                   ),
